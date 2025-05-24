@@ -1,7 +1,7 @@
 export default function PageHome() {
   return (
-    <main>
-      Home
+    <main className="">
+      <h1 className="">Fundo preto só aqui</h1>
     </main>
   );
 }
