@@ -6,7 +6,7 @@ import { Nunito } from "next/font/google";
 const nunito = Nunito({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Codarse",
+  title: "Your Course - Pagina inicial",
   description: "Plataformas de cursos gratuitos do youtube",
 };
 

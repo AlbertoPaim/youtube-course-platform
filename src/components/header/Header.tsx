@@ -2,14 +2,24 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { MdMenu, MdOpenInNew } from "react-icons/md";
 
 export const Header = () => {
-    const currentPath = usePathname();
-    return (
-        <nav className="px-6 gap-6 flex items-center justify-start md:justify-center bg-primary py-4">
 
-            <button className="sm:hidden">
+    const currentPath = usePathname();
+    const [tittle, setTittle] = useState('Your Curse');
+    const [drawer, setDrawer] = useState(false);
+
+    useEffect(() => {
+        setTittle(document.title);
+        setDrawer(false);
+    }, [currentPath]);
+
+    return (
+        <nav className="px-6 gap-6 flex items-center  justify-start md:justify-center bg-primary py-4">
+
+            <button className="sm:hidden" onClick={() => { setDrawer(true); }}>
                 <MdMenu size={24}> </MdMenu>
             </button>
 
@@ -40,7 +50,32 @@ export const Header = () => {
                 </li>
             </ul>
 
-            <h1 className="sm:hidden"> Your Curso - Página inicial</h1>
-        </nav>
+            <div onClick={() => { setDrawer(false); }} data-active={drawer} className="transition-transform data-[active=false]:-translate-x-full  fixed top-0 left-0 bottom-0 display-none right-0 bg-gradient-to-r from-black" data->
+                <ul onClick={e => { e.stopPropagation(); }} className="flex-col p-4 bg-background border-l-gray-800 w-60 border-r fixed h-full">
+
+                    <li className="pb-4">
+                        <Link href="/" data-active={currentPath == '/'} className="data-[active=true]:underline ">
+                            Página inicial
+                        </Link>
+                    </li>
+
+                    <li className="pb-4">
+                        <Link href="/cursos" data-active={currentPath == '/cursos'} className="data-[active=true]:underline ">
+                            Cursos
+                        </Link>
+                    </li>
+
+                    <li className="pb-2">
+                        <Link href="https://coinmarketcap.com/pt-br/" target="_blank" className="flex gap-1 items-center">
+                            Blog
+                            <MdOpenInNew></MdOpenInNew>
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+
+
+            <h1 className="sm:hidden">{tittle}</h1>
+        </nav >
     );
 };
