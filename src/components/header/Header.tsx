@@ -27,7 +27,7 @@ export const Header = () => {
 
 
                 <li className="">
-                    <span className="size-12 border-2 rounded-md px-2 py-2 bg-red font-black">Your Curso</span>
+                    <span className="size-4 w-10 border rounded-md px-2 py-2 bg-red font-black">Your Curso</span>
                 </li>
 
                 <li>

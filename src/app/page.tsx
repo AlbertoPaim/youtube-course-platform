@@ -1,7 +1,10 @@
+import { Section } from "@/components/section/Section";
+
 export default function PageHome() {
   return (
     <main className="">
-      <h1 className="">Fundo preto só aqui</h1>
+      <Section
+      />
     </main>
   );
 }
