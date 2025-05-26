@@ -3,7 +3,7 @@ import { Section } from "@/components/section/Section";
 export default function PageHome() {
   return (
     <main className="">
-      <Section
+      <Section variant="h-list" title="Veja mais cursos"
       />
     </main>
   );

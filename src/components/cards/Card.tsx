@@ -10,8 +10,8 @@ interface IcardProps {
 
 export const Card = ({ href, image, title, description }: IcardProps) => {
     return (
-        <Link href={href} className="hover:no-underline">
-            <article className="flex gap-4 flex-col p-2  sm:hover:bg-primary items-center">
+        <Link href={href} className="hover:no-underline ">
+            <article className="rounded-md flex gap-4 flex-col p-2 w-72 sm:hover:bg-primary items-center">
                 <Image className=" aspect-video object-cover rounded-3xl" src={image} alt="" width={1000} height={0} draggable={false} />
 
                 <h4 className=" font-black text-lg">{title}</h4>
