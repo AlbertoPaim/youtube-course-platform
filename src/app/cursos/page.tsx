@@ -7,8 +7,30 @@ export const metadata: Metadata = {
 
 export default function PageCursos() {
     return (
-        <main>
-            <Section variant='grid' title="Todos os cursos" />
+        <main className="mt-8 flex justify-center ">
+            <div className="min-[880px]:max-w-[880px]">
+                <Section variant='grid' title="Todos os cursos"
+                    items={[{
+                        href: '/cursos/123',
+                        description: "descrição",
+                        title: "titulo",
+                        image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
+                    },
+                    {
+                        href: '/cursos/123',
+                        description: "descrição",
+                        title: "titulo",
+                        image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
+                    },
+                    {
+                        href: '/cursos/123',
+                        description: "descrição",
+                        title: "titulo",
+                        image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
+                    }]}
+                />
+
+            </div>
         </main>
     );
 }
