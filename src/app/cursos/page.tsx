@@ -13,19 +13,19 @@ export default function PageCursos() {
                     items={[{
                         href: '/cursos/123',
                         description: "descrição",
-                        title: "titulo",
+                        title: "titulo1",
                         image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
                     },
                     {
                         href: '/cursos/123',
                         description: "descrição",
-                        title: "titulo",
+                        title: "titulo2",
                         image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
                     },
                     {
                         href: '/cursos/123',
                         description: "descrição",
-                        title: "titulo",
+                        title: "titulo3",
                         image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
                     }]}
                 />
