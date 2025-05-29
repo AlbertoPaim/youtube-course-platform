@@ -2,7 +2,7 @@ import { Section } from "@/components/section/Section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Your Curse - Cursos",
+    title: "Your Curse - Cursos"
 };
 
 export default function PageCursos() {
@@ -11,7 +11,7 @@ export default function PageCursos() {
             <div className="min-[880px]:max-w-[880px]">
                 <Section variant='grid' title="Todos os cursos"
                     items={[{
-                        href: '/cursos/123',
+                        href: '/cursos/12',
                         description: "descrição",
                         title: "titulo1",
                         image: 'https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg'
