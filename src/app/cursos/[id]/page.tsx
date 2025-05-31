@@ -22,6 +22,9 @@ export default function CourseDetail({ }: Props) {
                     imageUrl="https://i.ytimg.com/vi/bP47qRVRqQs/hqdefault.jpg"
                 />
                 <CourseHeader />
+                <CourseHeader />
+                <CourseHeader />
+                <CourseHeader />
             </div>
         </main>
     );
