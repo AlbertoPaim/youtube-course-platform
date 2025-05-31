@@ -7,7 +7,7 @@ interface ICollapsibleText {
     numberOfLines: number
 }
 
-export const CollapsibleText = ({ children, numberOfLines }: ICollapsibleText) => {
+export const CollapsibleText = ({ children }: ICollapsibleText) => {
 
     const [openText, setOpenText] = useState(false);
 
@@ -26,3 +26,4 @@ export const CollapsibleText = ({ children, numberOfLines }: ICollapsibleText) =
         </>
     );
 };
+
