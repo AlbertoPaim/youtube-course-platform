@@ -1,5 +1,5 @@
 import { CourseHeader } from "@/components/course-header/CourseHeader";
-import { Class } from "@/components/couse-content/Class";
+import { CourseContent } from "@/components/couse-content/CouseContent";
 import { StartCourse } from "@/components/StartCourse";
 import { Metadata } from "next";
 
@@ -26,12 +26,30 @@ export default function CourseDetail({ }: Props) {
                     />
                 </div>
 
-                <div className="flex-[2]">
+                <div className="flex-[2] gap-1 flex flex-col gap-12">
                     <CourseHeader />
-                    <Class
-                        title="Next js com tailwind ........"
-                        videoUrl={`/player/{courseId}/{classId}`}
+
+                    <CourseContent
+                        classGroups={[{
+                            courseID: '1',
+                            title: 'Introdução',
+                            classes:
+                                [
+                                    { id: '1', title: 'next.js, tailwindCSS ..... 01' },
+                                    { id: '2', title: 'next.js, tailwindCSS ..... 02' }
+                                ]
+                        },
+                        {
+                            courseID: '2',
+                            title: 'Desenvolvimento',
+                            classes:
+                                [
+                                    { id: '1', title: 'next.js, tailwindCSS ..... 01' },
+                                    { id: '2', title: 'next.js, tailwindCSS ..... 02' }
+                                ]
+                        }]}
                     />
+
 
                 </div>
             </div>
