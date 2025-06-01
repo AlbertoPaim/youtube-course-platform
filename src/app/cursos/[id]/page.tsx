@@ -1,4 +1,5 @@
 import { CourseHeader } from "@/components/course-header/CourseHeader";
+import { Class } from "@/components/couse-content/Class";
 import { StartCourse } from "@/components/StartCourse";
 import { Metadata } from "next";
 
@@ -27,18 +28,10 @@ export default function CourseDetail({ }: Props) {
 
                 <div className="flex-[2]">
                     <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
-                    <CourseHeader />
+                    <Class
+                        title="Next js com tailwind ........"
+                        videoUrl={`/player/{courseId}/{classId}`}
+                    />
 
                 </div>
             </div>
