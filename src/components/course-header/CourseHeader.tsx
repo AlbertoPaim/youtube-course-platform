@@ -25,6 +25,7 @@ export const CourseHeader = ({ title, description, numberOfclasses }: CourseHead
                 </CopyContent>
 
                 <span className="">{numberOfclasses} aulas</span>
+
             </div>
         </div>
     );

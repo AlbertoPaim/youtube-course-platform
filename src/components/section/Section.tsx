@@ -35,7 +35,7 @@ export const Section = ({ items, title, variant = 'grid' }: ISectionProps) => {
 
 
     return (
-        <section className="flex flex-col gap-4 px-4">
+        <section className="flex flex-col gap-4">
             <h2 className="font-bold text-xl">{title}</h2>
 
 

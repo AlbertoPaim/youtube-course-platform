@@ -37,11 +37,11 @@ export const Header = () => {
                     <MdMenu size={24}> </MdMenu>
                 </button>
 
-                <ul className="gap-4 flex">
+                <ul className="gap-4 flex items-center">
 
 
                     <li className="">
-                        <span className="size-4 w-10 border rounded-md px-2 py-2 bg-red font-black">Your Curso</span>
+                        <span className="hidden sm:block sm:border sm:rounded-md px-2 py-2 bg-red font-black">Your Curso</span>
                     </li>
 
                     <li>
