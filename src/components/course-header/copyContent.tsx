@@ -27,6 +27,7 @@ export const CopyContent = ({ title, content, children }: IcontentProps) => {
 
     return (
         <DropdownMenu.Root >
+
             <DropdownMenu.Trigger>
                 {children}
             </DropdownMenu.Trigger>
@@ -35,14 +36,20 @@ export const CopyContent = ({ title, content, children }: IcontentProps) => {
                 <DropdownMenu.Content className="mt-1 flex flex-col items-center gap-2 bg-paper p-2 rounded border border-primary">
                     <span>{title}</span>
                     <div className="flex gap-2">
-                        <input autoFocus onFocus={e => e.target.select()} readOnly className="text-black font-medium px-2 rounded outline-primary" type="text" defaultValue={content} />
-                        <button onClick={handleCopy}> {clipboard ? <MdContentPaste color="green" size={24} /> : <MdContentCopy size={24} color="white" />}</button>
+
+                        <input autoFocus
+                            onFocus={e => e.target.select()}
+                            readOnly
+                            className="text-black font-medium px-2 rounded outline-primary"
+                            defaultValue={content}
+                        />
+                        <button onClick={handleCopy}>
+                            {clipboard ? <MdContentPaste color="green" size={24} /> : <MdContentCopy size={24} color="white" />}
+                        </button >
                     </div>
 
                 </DropdownMenu.Content>
             </DropdownMenu.Portal>
-
-
         </DropdownMenu.Root >
     );
 };
