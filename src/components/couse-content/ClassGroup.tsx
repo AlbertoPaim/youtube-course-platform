@@ -1,6 +1,6 @@
 'use client';
 
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { Class } from "./Class";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ export const ClassGroup = ({ title, classes, courseID }: IclassGroupProps) => {
     <>
       <button onClick={() => setOpen(!open)} className="bg-paper flex gap-2 p-2 rounded-sm items-center">
 
-        {open ? <MdKeyboardArrowUp size={24} /> : <MdKeyboardArrowDown size={24} />}
+        {open ? <MdKeyboardArrowDown size={24} /> : <MdKeyboardArrowRight size={24} />}
         {title}
       </button>
 
