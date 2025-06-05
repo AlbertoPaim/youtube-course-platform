@@ -15,7 +15,7 @@ interface Props {
 
 export default function CourseDetail({ }: Props) {
     return (
-        <main className="mt-2 flex justify-center">
+        <main className="mt-20 flex justify-center">
             <div className="w-full min-[880px]:max-w-[880px] px-2 flex flex-col gap-4 md:flex-row-reverse">
 
                 <div className="flex-1">

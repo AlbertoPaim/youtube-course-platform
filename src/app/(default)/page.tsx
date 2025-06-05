@@ -3,7 +3,7 @@ import { Section } from "@/components/section/Section";
 
 export default function PageHome() {
   return (
-    <main className="mt-8 flex justify-center ">
+    <main className="mt-20 flex justify-center ">
       <div className="sm:max-w-[600px] md:max-w-[700px] lg:md:max-w-[880px] sm:max-h-28 flex flex-col gap-4 px-2">
         <KeepWatch />
 

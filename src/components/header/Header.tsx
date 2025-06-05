@@ -31,7 +31,7 @@ export const Header = () => {
 
     return (
         <>
-            <nav className="fixed top-0 right-0 left-0 px-6 gap-6 flex items-center  justify-start md:justify-center bg-primary py-4">
+            <nav className="fixed top-0 right-0 left-0 px-6 gap-6 flex items-center  justify-start md:justify-center bg-primary py-4 h-14">
 
                 <button className="sm:hidden" onClick={() => { setDrawer(true); }}>
                     <MdMenu size={24}> </MdMenu>
