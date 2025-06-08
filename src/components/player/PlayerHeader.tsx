@@ -16,7 +16,7 @@ export const PlayerHeader = ({ title, subtitle }: Props) => {
 
             <div>
                 <h1 className="text-lg font-bold line-clamp-1">{title}</h1>
-                <h2 className="line-clamp-1">{subtitle}</h2>
+                <h2 className="">{subtitle}</h2>
             </div>
         </div>
     </>);
