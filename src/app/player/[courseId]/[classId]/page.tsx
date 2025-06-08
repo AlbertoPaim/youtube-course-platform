@@ -1,3 +1,5 @@
+import { PlayerHeader } from "@/components/player/PlayerHeader";
+
 interface Props {
     params: {
         courseId: string;
@@ -7,6 +9,8 @@ interface Props {
 
 export default function Player({ params: { courseId, classId } }: Props) {
     return (
-        <> teste {courseId} {classId}</>
+        <>
+            <PlayerHeader title="Titulo aaaaaaaaaaasdasdaaaaaaaaaasdasaaaaaaaaadasasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" subtitle="Subtitulo" />
+            {courseId} {classId}</>
     );
 };
