@@ -14,7 +14,7 @@ const PlayerClass = ({ done, playing, title, onCheck, onPlay }: PlayerClassProps
         <button className="gap-4 p-4 flex items-center" onClick={() => onPlay()}>
 
             {!done && (
-                <div className="group">
+                <div className="group" onClick={e => { e.stopPropagation(); onCheck(); }}>
                     <MdPlayCircleOutline size={24} className="min-w-6 group-hover:hidden" />
                     <MdCircle size={24} className="hidden min-w-6 group-hover:block cursor-pointer" />
                 </div>
