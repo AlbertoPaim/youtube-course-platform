@@ -1,6 +1,6 @@
 import { MdCheckCircle, MdCircle, MdPlayCircleOutline } from "react-icons/md";
 
-interface PlayerClassProps {
+export interface PlayerClassProps {
     done: boolean;
     playing: boolean;
     title: string;
@@ -24,7 +24,7 @@ const PlayerClass = ({ done, playing, title, onCheck, onPlay }: PlayerClassProps
             )}
 
             <div className="flex flex-col gap-2">
-                <h1 data-done={done} className="line-clamp-1 data-[done=true]:text-green-700">{title}</h1>
+                <h1 data-done={done} className="line-clamp-1 data-[done=true]:text-green-700 text-start">{title}</h1>
 
                 {playing && (
                     <h2 className="bg-primary px-2 rounded-full">reproduzindo</h2>

@@ -1,26 +1,37 @@
-import PlayerClass from "@/components/player/PlayerClass";
+'use client';
+
+import { PlayerGroupClass } from "@/components/player/PlayerGroupClass";
 import { PlayerHeader } from "@/components/player/PlayerHeader";
+import { useParams } from "next/navigation";
 
-interface Props {
-    params: {
-        courseId: string;
-        classId: string;
-    }
-}
+export default function Player() {
 
-export default function Player({ params: { courseId, classId } }: Props) {
+    const params = useParams();
+    const courseId = params.courseId as string;
+    const classId = params.classId as string;
+
     return (
-        <>
-            <PlayerHeader title="Titulo aaaaaaaaaaasdas daaaaaaaaaasdasaa aaaaaaadasasdasdaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa" subtitle="Subtitulo" />
-            {courseId} {classId}
-            <PlayerClass
-                title={classId}
-                done={false}
-                playing={true}
-
-                onCheck={() => console.log('check')}
-                onPlay={() => console.log('play')}
+        <main className=" flex  flex-col gap-2">
+            <PlayerHeader title="Titulo"
+                subtitle="Subtitulo"
             />
-        </>
+
+            <PlayerGroupClass
+                onToggle={() => { console.log('teste'); }}
+                open={true}
+                title=""
+                position={1}
+                classes={[
+                    {
+                        title: 'api rest etc',
+                        done: true,
+                        playing: true,
+                    },
+
+                ]}
+            />
+
+        </main>
+
     );
 };
