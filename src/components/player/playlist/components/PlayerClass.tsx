@@ -1,3 +1,4 @@
+'use client';
 import { MdCheckCircle, MdCircle, MdPlayCircleOutline } from "react-icons/md";
 
 export interface PlayerClassProps {
