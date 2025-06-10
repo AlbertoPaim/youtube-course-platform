@@ -40,3 +40,7 @@ a {
 *::-webkit-scrollbar-track {
     @apply bg-transparent
 }
+
+.overflow-primary::-webkit-scrollbar-thumb {
+    @apply bg-primary
+}

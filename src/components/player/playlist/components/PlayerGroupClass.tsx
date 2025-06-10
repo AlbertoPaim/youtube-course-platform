@@ -10,9 +10,11 @@ export interface PlayerGroupClassProps {
     classes: (Pick<PlayerClassProps, 'done' | 'title'> & { classId: string })[];
     open: boolean;
     onToggle: () => void;
+    onPlay: (classId: string) => void;
+
 }
 
-export const PlayerGroupClass = ({ title, position, classes, open, onToggle, playingClassId }: PlayerGroupClassProps) => {
+export const PlayerGroupClass = ({ title, position, classes, open, onToggle, playingClassId, onPlay }: PlayerGroupClassProps) => {
     return (
 
         <div className="flex flex-col">
@@ -35,7 +37,7 @@ export const PlayerGroupClass = ({ title, position, classes, open, onToggle, pla
                             {...item}
                             playing={item.classId === playingClassId}
                             onCheck={() => console.log('check')}
-                            onPlay={() => console.log('play')}
+                            onPlay={() => onPlay(item.classId)}
                         />
                     </li>
                     ))}
