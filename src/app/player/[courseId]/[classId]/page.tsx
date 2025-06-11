@@ -1,6 +1,7 @@
 'use client';
 
 import { PlayerHeader } from "@/components/player/PlayerHeader";
+import { PlayerVideo } from "@/components/player/PlayerVideo";
 import { Playlist } from "@/components/player/playlist/Playlist";
 import { useParams } from "next/navigation";
 
@@ -23,147 +24,20 @@ export default function Player() {
 
                         groupClasses={[
                             {
-                                title: 'introdução',
+                                title: 'introdução1',
                                 classes: [{
                                     done: true,
                                     classId: '1',
                                     title: 'O que é next 01',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
                                 }, {
                                     done: true,
-                                    classId: '3',
+                                    classId: '2',
                                     title: 'O que é next 02',
                                 },
                                 {
                                     done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
                                     classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
-                                    classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
-                                    classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
-                                    classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
-                                    classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
-                                    classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
-                                }]
-                            },
-                            {
-                                title: 'introdução2',
-                                classes: [{
-                                    done: true,
-                                    classId: '2',
-                                    title: 'O que é next 02',
-                                }, {
-                                    done: true,
-                                    classId: '3',
-                                    title: 'O que é next 02',
-                                },
-                                {
-                                    done: true,
-                                    classId: '4',
-                                    title: 'O que é next 02',
+                                    title: 'O que é next 03',
                                 }]
                             }
                         ]}
@@ -171,7 +45,9 @@ export default function Player() {
 
                 </div>
                 <div className="flex-1">
-                    player video
+                    <PlayerVideo
+                        videoId='apXQAnFX3JM'
+                    />
                 </div>
             </div>
         </main>
