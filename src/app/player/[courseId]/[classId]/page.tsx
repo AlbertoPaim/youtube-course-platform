@@ -46,6 +46,7 @@ export default function Player() {
                 </div>
                 <div className="flex-1">
                     <PlayerVideo
+
                         videoId='apXQAnFX3JM'
                     />
                 </div>
