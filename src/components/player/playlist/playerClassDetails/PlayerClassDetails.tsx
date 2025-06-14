@@ -1,9 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { PlayerVideo } from "./components/PlayerVideo";
+import { IplayerVideoPropsRef, PlayerVideo } from "./components/PlayerVideo";
 import { PlayerGroupClassProps } from "../components/PlayerGroupClass";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { CourseHeader } from "@/components/course-header/CourseHeader";
 import { PlayerClassHeader } from "./components/PlayerClassHeader";
@@ -30,6 +30,8 @@ export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroup
 
     const router = useRouter();
 
+    const playerVideoref = useRef<IplayerVideoPropsRef>(null);
+
     const nextClassId = useMemo(() => {
         const classes = classGroups.flatMap(classGroupItem => classGroupItem.classes);
         const currentClassIndex = classes.findIndex(Classitem => Classitem.classId === playingClassId);
@@ -41,8 +43,10 @@ export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroup
 
     return (
         <div className="flex-1 overflow-auto pb-10">
+
             <div className="aspect-video">
                 <PlayerVideo
+                    ref={playerVideoref}
                     onNextVideo={() => nextClassId ? router.push(`/player/${playingCourseId}/${nextClassId}`) : {}}
                     videoId='apXQAnFX3JM'
                 />
@@ -68,6 +72,7 @@ export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroup
                     <PlayerClassHeader
                         title={classItem.title}
                         description={classItem.description}
+                        onTimeClick={seconds => playerVideoref.current?.setProgress(seconds)}
                     />
                 </Tabs.Content>
                 <Tabs.Content value="class-comments">
