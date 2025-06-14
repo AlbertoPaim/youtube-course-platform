@@ -5,14 +5,28 @@ import { PlayerVideo } from "./components/PlayerVideo";
 import { PlayerGroupClassProps } from "../components/PlayerGroupClass";
 import { useMemo } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
+import { CourseHeader } from "@/components/course-header/CourseHeader";
+import { PlayerClassHeader } from "./components/PlayerClassHeader";
 
 interface IPlayerClassDetailsProps {
+    course: {
+        title: string;
+        description: string;
+        numberOfClasses: number;
+    }
+
+    classItem: {
+        title: string;
+        description: string;
+    }
+
+
     playingCourseId: string;
     playingClassId: string;
     classGroups: Pick<PlayerGroupClassProps, 'classes' | 'title'>[];
 }
 
-export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroups }: IPlayerClassDetailsProps) => {
+export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroups, course, classItem }: IPlayerClassDetailsProps) => {
 
     const router = useRouter();
 
@@ -26,7 +40,7 @@ export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroup
     }, [classGroups, playingClassId]);
 
     return (
-        <div className="flex-1">
+        <div className="flex-1 overflow-auto pb-10">
             <div className="aspect-video">
                 <PlayerVideo
                     onNextVideo={() => nextClassId ? router.push(`/player/${playingCourseId}/${nextClassId}`) : {}}
@@ -47,16 +61,24 @@ export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroup
                     </Tabs.Trigger>
                 </Tabs.List>
 
-                <hr className="border-paper" />
+
+                <hr className="border-paper mb-2" />
 
                 <Tabs.Content value="class-details">
-                    Detalhes da aula
+                    <PlayerClassHeader
+                        title={classItem.title}
+                        description={classItem.description}
+                    />
                 </Tabs.Content>
                 <Tabs.Content value="class-comments">
                     Comentários
                 </Tabs.Content>
                 <Tabs.Content value="couser-details">
-                    Detalhes do curso
+                    <CourseHeader
+                        title={course.title}
+                        description={course.description}
+                        numberOfclasses={course.numberOfClasses}
+                    />
                 </Tabs.Content>
             </Tabs.Root>
 
