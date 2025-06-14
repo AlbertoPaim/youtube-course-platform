@@ -24,8 +24,6 @@ export const PlayerVideo = forwardRef<IplayerVideoPropsRef, IplayerVideoProps>((
     const [progress, setProgress] = useState<number | undefined>(undefined);
     const [totalDurantion, setTotalduration] = useState<number | undefined>(undefined);
 
-
-
     const secondsLeft = useMemo(() => {
 
         if (!totalDurantion) return undefined;
