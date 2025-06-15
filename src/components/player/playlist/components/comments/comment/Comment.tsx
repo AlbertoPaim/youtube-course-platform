@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { MdArrowDropDown, MdThumbUp } from "react-icons/md";
 
-interface ICommentProps {
+// interface ICommentProps {
 
-}
+// }
 
-export const Comment = ({ }: ICommentProps) => {
+export const Comment = () => {
     return (
         <div className="flex gap-2 items-start">
             <Image alt="Imagem de perfil" src={'https://marketplace.canva.com/EAFvwOp_LqM/1/0/1600w/canva-foto-de-perfil-para-linkedin-redondo-simples-degrad%C3%AA-preto-e-azul-escuro-frpVriKbKbM.jpg'}

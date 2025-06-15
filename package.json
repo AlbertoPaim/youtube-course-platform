@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googleapis/youtube": "^26.0.1",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-tabs": "^1.1.12",
+    "dotenv": "^16.5.0",
     "interweave": "^13.1.1",
     "interweave-autolink": "^5.1.2",
     "next": "15.1.8",

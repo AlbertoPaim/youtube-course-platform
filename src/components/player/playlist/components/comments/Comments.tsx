@@ -1,10 +1,10 @@
 import { Comment } from "./comment/Comment";
 
-interface ICommentsProps {
+// interface ICommentsProps {
+//     //
+// }
 
-}
-
-export const Comments = ({ }: ICommentsProps) => {
+export const Comments = ({ }) => {
     return (
         <div className="flex flex-col gap-2">
             <Comment />
