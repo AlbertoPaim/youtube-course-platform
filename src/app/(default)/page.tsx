@@ -6,8 +6,6 @@ export default async function PageHome() {
 
   const courses = await apiYoutube.course.getAll();
 
-
-
   return (
     <main className="mt-20 flex justify-center ">
 
@@ -21,7 +19,7 @@ export default async function PageHome() {
           items={courses.map(course => ({
             title: course.title,
             image: course.image,
-            href: `/course.${course.id}`,
+            href: `/course/${course.id}`,
             description: course.description,
           }))
 

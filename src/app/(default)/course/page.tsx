@@ -20,7 +20,7 @@ export default async function PageCursos() {
                     items={courses.map(course => ({
                         title: course.title,
                         image: course.image,
-                        href: `/course.${course.id}`,
+                        href: `/course/${course.id}`,
                         description: course.description,
                     }))}
                 />

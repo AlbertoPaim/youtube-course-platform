@@ -6,14 +6,14 @@ import { useState } from "react";
 
 export interface IclassGroupProps {
   title: string;
-  courseID: string;
+  courseId: string;
   classes: {
     id: string;
     title: string;
   }[];
 }
 
-export const ClassGroup = ({ title, classes, courseID }: IclassGroupProps) => {
+export const ClassGroup = ({ title, classes, courseId }: IclassGroupProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,7 +30,7 @@ export const ClassGroup = ({ title, classes, courseID }: IclassGroupProps) => {
           <li key={id}>
             <Class
               title={title}
-              videoUrl={`/player/${courseID}/${id}`}
+              videoUrl={`/player/${courseId}/${id}`}
             />
           </li>
         ))}

@@ -51,13 +51,13 @@ export const Header = () => {
                     </li>
 
                     <li>
-                        <Link href="/cursos" data-active={currentPath == '/cursos'} className="data-[active=true]:underline hidden sm:block">
+                        <Link href="/course" data-active={currentPath == '/course'} className="data-[active=true]:underline hidden sm:block">
                             Cursos
                         </Link>
                     </li>
 
                     <li className="hidden sm:block">
-                        <Link href="https://coinmarketcap.com/pt-br/" target="_blank" className="flex gap-1 items-center">
+                        <Link href="/" target="_blank" className="flex gap-1 items-center">
                             Blog
                             <MdOpenInNew></MdOpenInNew>
                         </Link>
@@ -74,13 +74,13 @@ export const Header = () => {
                         </li>
 
                         <li className="pb-4">
-                            <Link href="/cursos" data-active={currentPath == '/cursos'} className="data-[active=true]:underline ">
+                            <Link href="/course" data-active={currentPath == '/course'} className="data-[active=true]:underline ">
                                 Cursos
                             </Link>
                         </li>
 
                         <li className="pb-2">
-                            <Link href="https://coinmarketcap.com/pt-br/" target="_blank" className="flex gap-1 items-center">
+                            <Link href="/" target="_blank" className="flex gap-1 items-center">
                                 Blog
                                 <MdOpenInNew></MdOpenInNew>
                             </Link>

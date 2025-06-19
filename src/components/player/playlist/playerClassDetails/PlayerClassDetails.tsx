@@ -77,7 +77,20 @@ export const PlayerClassDetails = ({ playingCourseId, playingClassId, classGroup
                     />
                 </Tabs.Content>
                 <Tabs.Content value="class-comments" className="px-2">
-                    <Comments />
+                    <Comments
+                        comments={[
+                            {
+                                likesCounts: 15,
+                                replies: undefined,
+                                content: 'my reply',
+                                publishDate: '2025-05-23T20:16:23Z',
+                                author: {
+                                    userName: 'aLBERTI',
+                                    image: 'https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg'
+                                }
+                            }
+                        ]}
+                    />
                 </Tabs.Content>
                 <Tabs.Content value="couser-details" className="px-2">
                     <CourseHeader

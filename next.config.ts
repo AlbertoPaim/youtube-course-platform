@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'marketplace.canva.com',
+        hostname: 'letsenhance.io',
       }
     ],
   },
